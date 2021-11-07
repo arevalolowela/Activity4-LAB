@@ -1,0 +1,29 @@
+
+  <ion-toolbar>
+    <ion-title>
+      LOGIN PAGE
+    </ion-title>
+  </ion-toolbar>
+  
+<ion-content>
+<ion-list>
+  <ion-item>
+    <ion-label>Username</ion-label>
+    <ion-input type="text" required [(ngModel)]="username" #name="ngModel"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Password</ion-label>
+    <ion-input type="password" [formControl]="password"></ion-input>
+  </ion-item>
+</ion-list>
+
+{{ username }}<br>
+{{ password.value }}<br>
+<ion-button (click)="update()">Update</ion-button>
+<ion-button [routerLink]="['/profileForm']">LOGIN</ion-button>
+<ion-button [routerLink]="['/signup']">SIGNUP</ion-button>
+
+<ion-card>
+  <img src="assets/img/2.jpg"/>
+</ion-card>
+</ion-content>
